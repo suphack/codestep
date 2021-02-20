@@ -64,6 +64,16 @@ def sum_digits(x):
     return sum
 ```
 
+用课上的递归
+
+```python
+def sum_digits(x):
+    if x<10:
+        return x
+    else:
+        return sum_digits(x//10)+x%10
+```
+
 > python3 ok -q sum_digits --local
 
 # Optional Questions
@@ -93,6 +103,16 @@ def falling(n, k):
         n -= 1
         k -= 1
     return sum
+```
+
+用课上的递归
+
+```python
+def falling(n,k):
+    if k==0:
+        return 1
+    else:
+        return falling(n-1,k-1)*n
 ```
 
 > python3 ok -q falling --local
